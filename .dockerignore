@@ -1,0 +1,8 @@
+# Ignore our helper scripts
+build.sh
+deploy.sh
+release.sh
+
+# Ignore our source code as we mount it in the build and don't need it in the run container
+src/
+target/

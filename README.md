@@ -20,7 +20,7 @@ The build currently defaults to using [rustup](https://www.rustup.rs/) and a spe
 The `deploy.sh` script allows you to push your runtime container (see Dockerfile) over to a local resinOS device. You will first have to follow the [resinOS getting started guide](https://resinos.io/docs/raspberrypi3/gettingstarted/) to get a device up and running on your local network. 
 
 ### Release on resin.io
-To push this code to your fleet of resin.io device, you will first need to run `build.sh` to create the binary in `/release`. You then need to add your resin.io Application git remote to this repo and then do `git push resin master`. _Note_: this will build the `Dockerfile` and not the `Dockerfile.build`.
+To push this code to your fleet of resin.io device, you will first need to run `build.sh` to create the binary in `/release`. Now you need to commit the binary to the repo with `git add . && git commit -m "release to fleet"`. You then need to add your resin.io Application git remote to this repo and then do `git push resin master`. _Note_: this will build the `Dockerfile` and not the `Dockerfile.build`.
 
 ### Injecting Env vars into the ResinOS deployed container
 If you want to add some ENV vars to the runtime container the you can specify these in the environment [] section of the .resin-sync.yml file.
